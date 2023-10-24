@@ -67,9 +67,4 @@ class Plateau:
 
     
 
-# Exemple d'utilisation :
-pion_blanc = Pion('blanc')
-pion_blanc.deplacer((1, 2))  # Déplacer le pion blanc à la position (1, 2)
-print(pion_blanc.est_mouvement_valide((1, 3)))  # Doit renvoyer True pour un mouvement valide
-print(pion_blanc.est_mouvement_valide((1, 4)))  # Doit renvoyer True pour un mouvement valide au premier coup
-print(pion_blanc.est_mouvement_valide((1, 5)))  # Doit renvoyer False, mouvement invalide
+#rajouter les autres pièces et rajouter manger
