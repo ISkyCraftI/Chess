@@ -17,6 +17,25 @@ class Pion(Piece):
 
     def est_mouvement_valide(self, nouvelle_position):
         # Logique spécifique pour les pions
-        # Ici, vous devrez vérifier que le mouvement respecte les règles des pions, comme avancer d'une case ou deux lors du premier coup.
-        # Vous devrez également vérifier que le mouvement est valide par rapport à la disposition actuelle du plateau.
-        raise NotImplementedError("La méthode est_mouvement_valide doit être implémentée pour le pion.")
+        x1, y1 = self.position
+        x2, y2 = nouvelle_position
+
+        # Les pions se déplacent en avant d'une case (ou de deux au premier coup)
+        if self.couleur == 'blanc':
+            direction = 1  # Les pions blancs avancent vers le haut du plateau
+        else:
+            direction = -1  # Les pions noirs avancent vers le bas du plateau
+
+        if self.premier_coup and y2 == y1 + 2 * direction:
+            return True  # Premier coup, peut avancer de deux cases
+        elif y2 == y1 + direction:
+            return True  # Avancer d'une case
+
+        return False  # Mouvement invalide
+
+# Exemple d'utilisation :
+pion_blanc = Pion('blanc')
+pion_blanc.deplacer((1, 2))  # Déplacer le pion blanc à la position (1, 2)
+print(pion_blanc.est_mouvement_valide((1, 3)))  # Doit renvoyer True pour un mouvement valide
+print(pion_blanc.est_mouvement_valide((1, 4)))  # Doit renvoyer True pour un mouvement valide au premier coup
+print(pion_blanc.est_mouvement_valide((1, 5)))  # Doit renvoyer False, mouvement invalide
