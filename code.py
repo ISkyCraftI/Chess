@@ -15,4 +15,3 @@ class Tour(Piece):
     def deplacer(self, depart, arrivee):
         # Logique spécifique pour le déplacement de la tour
         pass
-je suis matou et je modifie le fichier 
