@@ -34,7 +34,8 @@ class Pion(Piece):
         return False  # Mouvement invalide
 
 class Plateau:
-    length = ['A']
+    length = ['A','B','C','D','E','F','G','H']  # horizontal du plateau
+    width = ['1','2','3','4','5','6','7','8']   # vertical du plateau
     def __init__(self, length, width):
         self.length = length
         self.width = width
