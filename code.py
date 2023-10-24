@@ -33,6 +33,12 @@ class Pion(Piece):
 
         return False  # Mouvement invalide
 
+class Plateau:
+    length = ['A']
+    def __init__(self, length, width):
+        self.length = length
+        self.width = width
+
 # Exemple d'utilisation :
 pion_blanc = Pion('blanc')
 pion_blanc.deplacer((1, 2))  # Déplacer le pion blanc à la position (1, 2)
