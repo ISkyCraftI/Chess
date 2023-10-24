@@ -36,7 +36,7 @@ class Pion(Piece):
 class Plateau:
     length = ['A','B','C','D','E','F','G','H']  # horizontal du plateau
     width = ['1','2','3','4','5','6','7','8']   # vertical du plateau
-    first_init = [[None for i in range (9)]None for i in range (9)]
+    first_init = [[None for i in range (9)] * None for i in range (9)]    # Initialisation d'un tableau vide
     def __init__(self, length, width):
         self.length = length
         self.width = width
