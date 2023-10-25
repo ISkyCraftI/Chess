@@ -1,4 +1,4 @@
-class Piece:
+class Piece: # ceci est une piece
     def __init__(self, couleur):
         self.couleur = couleur  # 'blanc' ou 'noir'
         self.position = None
